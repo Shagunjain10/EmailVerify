@@ -5,7 +5,7 @@
 ```
 http://localhost:8000/account/register/
 or
-http://basket-grocery.herokuapp.com/account/register/
+http://emailverify0.herokuapp.com/account/register/
 ```
 - method:- POST
 - Parameter
@@ -16,11 +16,11 @@ http://basket-grocery.herokuapp.com/account/register/
 ```
 http://localhost:8000/account/login/
 or
-http://basket-grocery.herokuapp.com/account/login/
+http://emailverify0.herokuapp.com/account/login/
 ```
 
 ```
 http://localhost:8000/account/logout/
 or
-http://basket-grocery.herokuapp.com/account/logout/
+http://emailverify0.herokuapp.com/account/logout/
 ```
