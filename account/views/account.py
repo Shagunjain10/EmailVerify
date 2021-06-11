@@ -61,7 +61,7 @@ class ObtainAccount(viewsets.ViewSet):
             profile=Profile.objects.create(user=user)
             site = get_current_site(request)
             print("mail sendinng")
-            mail_subject = "Confirmation message"
+            mail_subject = "Registration verification mail"
             message = render_to_string('account/activate.html', {
                 "user": user,
                 'domain': site.domain,
@@ -70,8 +70,8 @@ class ObtainAccount(viewsets.ViewSet):
             })
             to_email = email
             to_list = [to_email]
-            from_email = settings.EMAIL_HOST_USER
-            send_mail(mail_subject, message, from_email, to_list, fail_silently=True)
+            senderemail = settings.EMAIL_HOST_USER
+            send_mail(mail_subject, message, senderemail, to_list, fail_silently=True)
             # print("mail sent")
             return Response({'token':token.key,'message':'user created successfully'},status=status.HTTP_200_OK)
         except Exception as e:
